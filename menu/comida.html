@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Tienda de Comida</title>
+    <link rel="stylesheet" href="comida.css">
+</head>
+<body>
+    <h1>Menú de Tienda de Comida</h1>
+
+    <div id="mesa-selector">
+        <div class="mesa" onclick="seleccionarMesa(1)">
+            <h2>Mesa 1</h2>
+            <p>Total: $<span id="total1">0</span></p>
+            <button class="reset-button" onclick="resetearMesa(1)">Resetear Mesa 1</button>
+        </div>
+        <div class="mesa" onclick="seleccionarMesa(2)">
+            <h2>Mesa 2</h2>
+            <p>Total: $<span id="total2">0</span></p>
+            <button class="reset-button" onclick="resetearMesa(2)">Resetear Mesa 2</button>
+        </div>
+        <div class="mesa" onclick="seleccionarMesa(3)">
+            <h2>Mesa 3</h2>
+            <p>Total: $<span id="total3">0</span></p>
+            <button class="reset-button" onclick="resetearMesa(3)">Resetear Mesa 3</button>
+        </div>
+    </div>
+
+    <div id="menu-comida">
+        <label for="comida">Selecciona tu comida:</label>
+        <select id="comida">
+            <option value="1">Hamburguesa - $15,000</option>
+            <option value="2">Pizza - $10,000</option>
+            <option value="3">Papas Fritas - $5,000</option>
+        </select>
+        <button onclick="incrementar('comida')">Añadir</button>
+        <button onclick="decrementar('comida')">Quitar</button>
+        <div class="menu-item">
+            <span>Hamburguesa: </span><span id="cantidad1">0</span><span id="item1-total">$0</span>
+        </div>
+        <div class="menu-item">
+            <span>Pizza: </span><span id="cantidad2">0</span><span id="item2-total">$0</span>
+        </div>
+        <div class="menu-item">
+            <span>Papas Fritas: </span><span id="cantidad3">0</span><span id="item3-total">$0</span>
+        </div>
+    </div>
+
+    <div id="menu-bebidas">
+        <label for="bebida">Selecciona tu bebida:</label>
+        <select id="bebida">
+            <option value="4">Coca-Cola - $3,000</option>
+            <option value="5">Jugo - $2,500</option>
+            <option value="6">Agua - $2,000</option>
+        </select>
+        <button onclick="incrementar('bebida')">Añadir</button>
+        <button onclick="decrementar('bebida')">Quitar</button>
+        <div class="menu-item">
+            <span>Coca-Cola: </span><span id="cantidad4">0</span><span id="item4-total">$0</span>
+        </div>
+        <div class="menu-item">
+            <span>Jugo: </span><span id="cantidad5">0</span><span id="item5-total">$0</span>
+        </div>
+        <div class="menu-item">
+            <span>Agua: </span><span id="cantidad6">0</span><span id="item6-total">$0</span>
+        </div>
+    </div>
+
+    <div id="total">
+        Total General: $<span id="total-value">0</span>
+    </div>
+
+    <script src="comida.js"></script>
+</body>
+</html>
